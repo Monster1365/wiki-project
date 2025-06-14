@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>석적고등학교 3-6</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+
+    <header>
+      <div>
+        <img src="{{ url_for('static', filename='img/logo.webp') }}" alt="석적고 로고">
+      </div>
+      <nav>
+        <a href="{{ url_for('change')}}">최근 변경</a>
+        <a href="{{ url_for('discussion')}}">최근 토론</a>
+        <a href="{{ url_for('edit')}}">편집</a>
+      </nav>
+    </header>
+
+    <div class="content">
+      <h1>석적고 3학년 6반 </h1>
+      <hr>
+
+      <!-- 목차와 지도가 나란히 있는 상단 섹션 -->
+      <div class="top-section">
+        <!-- 목차 -->
+        <aside class="sidebar">
+          <strong>목차</strong><br>
+          <a href="#section_1">1. 개요</a>
+          <a href="#section_2">2. 6반의 인물들</a>
+          <div class="subsection">
+            <a href="#section_2_1">2.1. 선생님</a>
+            <a href="#section_2_2">2.2. 반장</a>
+            <a href="#section_2_3">2.3. 부반장</a>
+          </div>
+          <a href="#section_3">3. 사건사고 목록</a>
+          <div class="subsection">
+            <a href="#section_3_1">3.1. 사건1</a>
+            <a href="#section_3_2">3.2. 사건2</a>
+            <a href="#section_3_3">3.3. 사건3</a>
+          </div>
+          <a href="#section_4">4. 명대사</a>
+          <a href="#section_5">5. 청소역할분담</a>
+          <div class="subsection">
+            <a href="#section_5_1">5.1. A조</a>
+            <a href="#section_5_2">5.2. B조</a>
+            <a href="#section_5_3">5.3. C조</a>
+          </div>
+          <a href="#section_6">6. 기타</a>
+        </aside>
+
+        <!-- 지도 및 정보 -->
+        <div class="map-box">
+          <h3 style="text-align: center">석적고등학교 3-6<br>
+          <small style="text-align: center">SEOKJEOK High School</small></h3><hr>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.7722025118366!2d128.41605687648714!3d36.081634371196155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565c35474a5a559%3A0x8e4077fe6b2c2531!2z7ISc7Jq47Yq567OE7Iuc6rCV7JWE!5e0!3m2!1sko!2skr!4v1718262436613!5m2!1sko!2skr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <hr>
+          <p><strong>유형:</strong> 일반계 고등학교 3학년 6반</p>
+          <hr>
+          <p><strong>대표:</strong> 이진일</p>
+        </div>
+      </div>
+
+      <!-- 개요 Section -->
+      <div class="section" id="section_1">
+        <div class="section-header">
+          <span class="toggle-button">▼</span>
+          <h2>1. 개요</h2>
+        </div>
+        <div class="section-body">
+          <hr>
+          <p>경상북도 칠곡군 석적읍에 있는 남녀 공학 공립 일반계 고등학교의 3학년 6반이다.</p>
+        </div>
+      </div>
+
+      <!-- 6반 인물들 Section -->
+      <div class="section" id="section_2">
+        <div class="section-header">
+          <span class="toggle-button">▼</span>
+          <h2>2. 6반의 인물들</h2>
+        </div>
+        <div class="section-body">
+          <hr>
+          <div>
+            <!-- 선생님 Section -->
+            <div class="section" id="section_2_1">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>2.1. 선생님</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>3학년 6반의 담임선생님은 이진일 선생님<a class="fn" id="fn_1" href="#footnote-1">[1]</a>이다. 담당 과목은 지구과학2와 생활과 과학이다.</p>
+              </div>
+            </div>
+      
+            <!-- 반장 Section -->
+            <div class="section" id="section_2_2">
+            <div class="section-header">
+              <span class="toggle-button">▼</span>
+              <h3>2.2. 반장</h3>
+              </div>
+                <div class="section-body">
+                <hr>
+                <p>3학년 6반의 반장으로 반 아이들을 잘 이끌어주며 학급 내 다양한 역할을 수행한다.</p>
+              </div>
+            </div>
+      
+            <!-- 부반장 Section -->
+            <div class="section" id="section_2_3">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>2.3. 부반장</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>3학년 6반의 부반장으로 바장을 도와 성실하게 제 역할을 수행한다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 사건사고목록 Section -->
+      <div class="section" id="section_3">
+        <div class="section-header">
+          <span class="toggle-button">▼</span>
+          <h2>3. 사건사고 목록</h2>
+        </div>
+        <div class="section-body">
+          <hr>
+          <p>3학년 6반의 다양한 사건들</p>
+          <div>
+            <!-- 사건1 Section -->
+            <div class="section" id="section_3_1">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>3.1. 사건1</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>내용</p>
+              </div>
+            </div>
+            
+            <!-- 사건1 Section -->
+            <div class="section" id="section_3_2">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>3.2. 사건2</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>내용</p>
+              </div>
+            </div>
+            
+            <!-- 사건1 Section -->
+            <div class="section" id="section_3_3">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>3.3. 사건3</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>내용</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <!-- 명대사 Section -->
+      <div class="section" id="section_4">
+        <div class="section-header">
+          <span class="toggle-button">▼</span>
+          <h2>4. 명대사</h2>
+        </div>
+        <div class="section-body">
+          <hr>
+          <div class="section-body-content">
+            <h4>" 오종없 만있반 "</h4>
+            <p> - 이진일 선생님 -</p>
+          </div>
+          <p>3학년 6반의 대표적인 명대사로, 오늘 종례 없음 만약 있으면 반톡'의 줄임말이다. 창시자는 6반의 담임인 이진일 선생님이다.</p>
+        </div>
+      </div>
+      
+      <!-- 청소역할분담 Section -->
+      <div class="section" id="section_5">
+        <div class="section-header">
+          <span class="toggle-button">▼</span>
+          <h2>5. 청소역할분담</h2>
+        </div>
+        <div class="section-body">
+          <hr>
+          <p>A, B, C조로 나뉘어져 주마다 돌아가며 청소를 담당한다.</p>
+          <div>
+            <!-- A조 Section -->
+            <div class="section" id="section_5_1">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>5.1. A조</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>내용</p>
+              </div>
+            </div>
+            
+            <!-- B조 Section -->
+            <div class="section" id="section_5_2">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>5.2. B조</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>내용</p>
+              </div>
+            </div>
+            
+            <!-- C조 Section -->
+            <div class="section" id="section_5_3">
+              <div class="section-header">
+                <span class="toggle-button">▼</span>
+                <h3>5.3. C조</h3>
+              </div>
+              <div class="section-body">
+                <hr>
+                <p>내용</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <!-- 기타 Section -->
+      <div class="section" id="section_6">
+        <div class="section-header">
+          <span class="toggle-button">▼</span>
+          <h2>6. 기타</h2>
+        </div>
+        <div class="section-body">
+          <hr>
+          <p>내용</p>
+        </div>
+      </div>
+      
+      <!-- 각주 Section -->
+      <div class="footnote">
+        <br>
+        <hr>
+        <h3>각주</h3>
+        <p id="footnote-1"><a href="#fn_1">[1]</a> 석적고로 오기 전에 중학교에서 근무했었다고 한다.</p>
+        <p id="footnote-2">[2] 내용</p>
+        <p id="footnote-3">[3] 내용</p>
+      </div>
+      
+    </div>
+    
+    <footer>
+      <div>
+        <a>Developer - 3601, 3603, 3625</a>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  </body>
+</html>
