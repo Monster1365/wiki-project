@@ -4,6 +4,7 @@ body {
   background-color: #eee;
 }
 
+/* 초록색 맨위 */
 header {
   background-color: #084c0e;
   color: white;
@@ -25,10 +26,12 @@ nav a {
   font-weight: bold;
 }
 
+/* 본문전체 (초록색 맨위 맨아래 제외) */
 .content {
   padding: 20px;
 }
 
+/* 지도와 목차가 나란히 있는 섹션 */
 .top-section {
   display: flex;
   gap: 20px;
@@ -36,6 +39,7 @@ nav a {
   flex-wrap: wrap;
 }
 
+/* 목차 */
 .sidebar {
   width: 250px;
   background: white;
@@ -53,12 +57,14 @@ nav a {
   text-decoration: none;
 }
 
+/* 지도 & 표 */
 .map-box {
   flex: 1;
   background: white;
   padding: 10px;
   border: 1px solid #aaa;
   max-width: 600px; /* ✅ 지도 최대 너비 제한 */
+  height: 100%;
   margin-left: auto; /* 오른쪽 끝으로 밀기 */
   box-sizing: border-box;
 }
@@ -72,6 +78,38 @@ nav a {
   color: #666;
 }
 
+.map-box iframe {
+  width: 100%;
+}
+
+.map-box-table {
+  border-collapse: collapse;
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.map-box-table th {
+  background-color: #084c0e;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  color: white;
+  padding: 10px;
+}
+
+.map-box-table td {
+  border: 1px solid #c7c7c7;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.map-box-table img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+/* 섹션 */
 .section {
   background-color: #f8f8f8;
   padding: 10px;
@@ -91,6 +129,11 @@ nav a {
   color: #333366;
 }
 
+.section-body {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
 .section-body-content {
   border: 1px solid #aaa;
   width: 200px;
@@ -102,6 +145,7 @@ nav a {
   text-align: center;
 }
 
+/* 토글버튼 */
 .toggle-button {
   display: inline-block;
   width: 20px;
@@ -112,17 +156,14 @@ nav a {
   user-select: none;
 }
 
-.section-body {
-  margin-top: 10px;
-  padding-left: 10px;
-}
-
+/* 줄 */
 hr {
   border: none;
   border-top: 1px solid #aaa;
   margin: 10px 0;
 }
 
+/* 맨아래 */
 footer {
   background-color: #084c0e;
   color: white;

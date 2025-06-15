@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>석적고등학교 3-6</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
   </head>
   <body>
 
+    <!-- 초록색 맨 위 -->
     <header>
       <div>
         <img src="{{ url_for('static', filename='img/logo.webp') }}" alt="석적고 로고">
@@ -29,37 +30,118 @@
         <aside class="sidebar">
           <strong>목차</strong><br>
           <a href="#section_1">1. 개요</a>
-          <a href="#section_2">2. 6반의 인물들</a>
+          <a href="#section_2">2. 학교 연혁</a>
+          <a href="#section_3">3. 교훈 및 상징</a>
           <div class="subsection">
-            <a href="#section_2_1">2.1. 선생님</a>
-            <a href="#section_2_2">2.2. 반장</a>
-            <a href="#section_2_3">2.3. 부반장</a>
+            <a href="#section_3_1">3.1. 교표</a>
+            <a href="#section_3_2">3.2. 교화</a>
+            <a href="#section_3_3">3.3. 교목</a>
+            <a href="#section_3_4">3.4. 교훈</a>
+            <a href="#section_3_5">3.5. 교가</a>
+            <a href="#section_3_6">3.6. 로고</a>
           </div>
-          <a href="#section_3">3. 사건사고 목록</a>
+          <a href="#section_4">4. 학교 특징</a>
+          <div>
+            <a href="#section_4_1">4.1. 교복</a>
+            <a href="#section_4_1">4.2. 지형</a>
+          </div>
+          <a href="#section_5">5. 학교 시설</a>
           <div class="subsection">
-            <a href="#section_3_1">3.1. 사건1</a>
-            <a href="#section_3_2">3.2. 사건2</a>
-            <a href="#section_3_3">3.3. 사건3</a>
+            <a href="#section_5_1">5.1. 본관</a>
+            <div>
+              <a href="#section_5_1_1">5.1.1. 체육관</a>
+              <a href="#section_5_1_2">5.1.2. 식당</a>
+            </div>
+            <a href="#section_5_2">5.2. 음악실</a>
+            <a href="#section_5_3">5.3. 컴퓨터실</a>
+            <a href="#section_5_4">5.4. 동아리실</a>
+            <a href="#section_5_5">5.5. 밴드실</a>
+            <a href="#section_5_6">5.6. 생활관(화산의지원)</a>
           </div>
-          <a href="#section_4">4. 명대사</a>
-          <a href="#section_5">5. 청소역할분담</a>
+          <a href="#section_6">6. 학교생활</a>
           <div class="subsection">
-            <a href="#section_5_1">5.1. A조</a>
-            <a href="#section_5_2">5.2. B조</a>
-            <a href="#section_5_3">5.3. C조</a>
+            <a href="#section_6_1">6.1. 주요 행사</a>
+            <a href="#section_6_2">6.2. 학교 일과</a>
+            <a href="#section_6_3">6.3. 기숙사 생활</a>
           </div>
-          <a href="#section_6">6. 기타</a>
+          <a href="#section_7">7. 운동부</a>
+          <a href="#section_8">8. 출신 인물</a>
+          <a href="#section_9">9. 이용 가능한 대중교통</a>
+          <div>
+            <a href="#section_9_1">9.1. 버스</a>
+          </div>
+          <a href="#section_10">10. 사건 사고 및 논란</a>
+          <div>
+            <a href="#section_10_1">10.1. 2016년 급식 식중독 사고</a>
+          </div>
+          <a href="#section_11">11. 학급</a>
+          <div>
+            <a href="#section_1">11.1. 3학년 6반</a>
+            <div>
+              <a href="#section_11_1">11.1.1. 6반의 인물들</a>
+              <div class="subsection">
+                <a href="#section_11_1_1">11.1.1. 선생님</a>
+                <a href="#section_11_1_2">11.1.2. 반장</a>
+                <a href="#section_11_1_3">11.1.3. 부반장</a>
+              </div>
+              <a href="#section_11_2">11.2. 사건사고 목록</a>
+              <div class="subsection">
+                <a href="#section_11_2_1">11.2.1. 사건1</a>
+                <a href="#section_11_2_2">11.2.2. 사건2</a>
+                <a href="#section_11_2_3">11.2.3. 사건3</a>
+              </div>
+              <a href="#section_11_3">11.3. 명대사</a>
+              <a href="#section_11_4">11.4. 청소역할분담</a>
+              <div class="subsection">
+                <a href="#section_11_4_1">11.4.1. A조</a>
+                <a href="#section_11_4_2">11.4.2. B조</a>
+                <a href="#section_11_4_3">11.4.3. C조</a>
+              </div>
+            </div>
+          </div>
+          <a href="#section_12">12. 기타</a>
         </aside>
 
         <!-- 지도 및 정보 -->
         <div class="map-box">
+          <!-- 소제목 -->
           <h3 style="text-align: center">석적고등학교 3-6<br>
           <small style="text-align: center">SEOKJEOK High School</small></h3><hr>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.7722025118366!2d128.41605687648714!3d36.081634371196155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565c35474a5a559%3A0x8e4077fe6b2c2531!2z7ISc7Jq47Yq567OE7Iuc6rCV7JWE!5e0!3m2!1sko!2skr!4v1718262436613!5m2!1sko!2skr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          <hr>
-          <p><strong>유형:</strong> 일반계 고등학교 3학년 6반</p>
-          <hr>
-          <p><strong>대표:</strong> 이진일</p>
+          <!-- 지도 -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.7722025118366!2d128.41605687648714!3d36.081634371196155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565c35474a5a559%3A0x8e4077fe6b2c2531!2z7ISc7Jq47Yq567OE7Iuc6rCV7JWE!5e0!3m2!1sko!2skr!4v1718262436613!5m2!1sko!2skr" widtd="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe><hr>
+          <!-- 표 -->
+          <table class="map-box-table">
+            <tr>
+              <th>개교</td><td>2013년 3월 1일</td>
+            </tr>
+            <tr>
+              <th>유형</td><td>일반계 고등학교</td>
+            </tr>
+            <tr>
+              <th>성별</td><td>남녀 공학</td>
+            </tr>
+            <tr>
+              <th>형태</td><td>공립</td>
+            </tr>
+            <tr>
+              <th>교직원 현황</td><td>차용석</td>
+            </tr>
+            <tr>
+              <th>교직원 현황</td><td>72명 (2023학년도)</td>
+            </tr>
+            <tr>
+              <th>학생 현황</td><td>583명 (2023학년도)</td>
+            </tr>
+            <tr>
+              <th>관할청</td><td>경상북도교육청</td>
+            </tr>
+            <tr>
+              <th>소재지</td><td>경상북도 칠곡군 석적읍 동중리 1길 65-20</td>
+            </tr>
+            <tr>
+              <th>웹사이트</td><td><img src="{{ url_for('static', filename='img/home.svg') }}" alt="웹사이트"></td>
+            </tr>
+          </table>
         </div>
       </div>
 
@@ -263,6 +345,7 @@
       
     </div>
     
+    <!-- 초록색 맨 아래 -->
     <footer>
       <div>
         <a>Developer - 3601, 3603, 3625</a>
