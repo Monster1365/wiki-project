@@ -47,7 +47,7 @@ nav a {
   border: 1px solid #aaa;
   height: fit-content;
   box-sizing: border-box;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .sidebar a {
@@ -63,7 +63,7 @@ nav a {
   background: white;
   padding: 10px;
   border: 1px solid #aaa;
-  max-width: 600px; /* ✅ 지도 최대 너비 제한 */
+  max-width: 800px; /* 지도 최대 너비 제한 */
   height: 100%;
   margin-left: auto; /* 오른쪽 끝으로 밀기 */
   box-sizing: border-box;
@@ -145,6 +145,85 @@ nav a {
   text-align: center;
 }
 
+.section2-table {
+  border-collapse: collapse;
+  padding: 10px;
+  margin: auto;
+  margin-left: 0;
+}
+
+.section2-table th {
+  background-color: #084c0e;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  color: white;
+  padding: 10px;
+}
+
+.section2-table td {
+  border: 1px solid #c7c7c7;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.section6-table {
+  border-collapse: collapse;
+  padding: 10px;
+  margin: auto;
+  margin-left: 0;
+  text-align: center;
+}
+
+.section6-table th {
+  background-color: #eee;
+  border: 1px solid #c7c7c7;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.section6-table td {
+  background-color: #eee;
+  border: 1px solid #c7c7c7;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+#section_3_2 img {
+  margin: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#section_3_3 img {
+  margin: auto;
+  max-width: 200px;
+  max-height: 250px;
+}
+
+#section_3_5 img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#section_5_2 img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#section_5_3 img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#section_9_1 img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
 /* 토글버튼 */
 .toggle-button {
   display: inline-block;
@@ -154,6 +233,13 @@ nav a {
   color: #888;
   cursor: pointer;
   user-select: none;
+}
+
+/* 글자 동그라미 인덱싱 */
+.li-index {
+  margin: auto;
+  margin-left: 30px;
+  line-height: 35px;
 }
 
 /* 줄 */
@@ -173,8 +259,14 @@ footer {
   justify-content: space-between;
 }
 
+/* 각주 */
 .fn {
   font-size: 10px;
+  color: #0000cc;
+}
+
+.footnote a {
+  color: #0000cc;
 }
 
 /* 반응형 처리: 모바일에서는 세로 정렬 */
