@@ -3,6 +3,7 @@ from google.oauth2 import id_token
 from google.auth.transport.requests import Request
 from flask_jwt_extended import create_access_token
 from firebase_admin import firestore
+import time
 import requests
 from . import auth
 
@@ -34,7 +35,7 @@ def google_callback():
     # user_email = idinfo['email']
     # user_name = idinfo['name']
 
-    jwtKey = create_access_token(identity=user_id)
+    jwtKey = create_access_token(identity=user_id + str(time.time()))
 
     # return f"Logined As {user_id}, mail: {user_email}, name: {user_name}"
     return jsonify({"access_token": jwtKey})
