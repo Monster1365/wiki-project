@@ -2,6 +2,7 @@ from flask import redirect, url_for, current_app, request, jsonify
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request
 from flask_jwt_extended import create_access_token
+import firebase_admin.auth
 from firebase_admin import firestore
 import time
 import requests
@@ -31,11 +32,13 @@ def google_callback():
 
     idinfo = id_token.verify_oauth2_token(token, Request(), current_app.config["GOOGLE_CLIENT_ID"])
 
-    user_id = idinfo['sub']
-    # user_email = idinfo['email']
-    # user_name = idinfo['name']
+    try:
+        user = firebase_admin.auth.get_user(idinfo['sub'])
+    except firebase_admin.auth.UserNotFoundError:
+        user = firebase_admin.auth.create_user(
+        uid=idinfo['sub'], email=idinfo['email'], display_name=idinfo['name'])
 
-    jwtKey = create_access_token(identity=user_id + str(time.time()))
+    jwtKey = create_access_token(identity=idinfo['sub'] + str(time.time()))
 
     # return f"Logined As {user_id}, mail: {user_email}, name: {user_name}"
     return jsonify({"access_token": jwtKey})
