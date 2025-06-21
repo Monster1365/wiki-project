@@ -1,10 +1,12 @@
-from flask import render_template, current_app, request
+from flask import render_template, request, session
 from firebase_admin import firestore
 from . import main
 
 @main.route('/')
 def index():
-    return render_template('index.html')
+    if "token" in session:
+        return render_template('index.html')
+    return "로그인 필요"
 
 @main.route('/article')
 def article():

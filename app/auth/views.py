@@ -1,4 +1,4 @@
-from flask import redirect, url_for, current_app, request, jsonify
+from flask import redirect, url_for, current_app, request, jsonify, session
 from google.oauth2 import id_token
 from google.auth.transport.requests import Request
 from flask_jwt_extended import create_access_token
@@ -39,6 +39,8 @@ def google_callback():
         uid=idinfo['sub'], email=idinfo['email'], display_name=idinfo['name'])
 
     jwtKey = create_access_token(identity=idinfo['sub'] + str(time.time()))
+
+    session["token"] = jwtKey
 
     # return f"Logined As {user_id}, mail: {user_email}, name: {user_name}"
     return jsonify({"access_token": jwtKey})
