@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>문서편집 - {{article_title}}</title><link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+        <div>
+            <a href="{{ url_for('main.index')}}"><img src="{{ url_for('static', filename='img/logo.webp') }}" alt="석적고 로고"></a>
+        </div>
+        </header>
+        <div class="content">
+            <form action="/api/edit" method="POST">
+                <input name="article_title" type="text" value={{article_title}} hidden="true">
+                <textarea name="article_content" placeholder="문서 내용" cols="100" rows="50">
+                    {{article_content}}
+                </textarea><br>
+                <input type="submit">
+            </form>
+        </div>
+    </body>
+</html>
