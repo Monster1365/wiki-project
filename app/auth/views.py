@@ -11,9 +11,13 @@ from . import auth
 @auth.route('/login')
 def login():
     redirect_uri = url_for('auth.google_callback', _external=True)
-    print(redirect_uri)
     client_id = current_app.config["GOOGLE_CLIENT_ID"]
     return redirect(f"https://accounts.google.com/o/oauth2/v2/auth?client_id={client_id}&response_type=code&scope=openid%20email%20profile&redirect_uri={redirect_uri}")
+
+@auth.route('/logout')
+def logout():
+    session.pop('token', None)
+    return redirect(url_for("main.index"))
 
 @auth.route('/login/callback')
 def google_callback():
@@ -43,4 +47,4 @@ def google_callback():
     session["token"] = jwtKey
 
     # return f"Logined As {user_id}, mail: {user_email}, name: {user_name}"
-    return jsonify({"access_token": jwtKey})
+    return redirect(url_for('main.index'))

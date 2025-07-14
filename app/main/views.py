@@ -1,12 +1,21 @@
-from flask import render_template, request, session
+from flask import render_template, request, session, redirect, url_for
+from functools import wraps
 from firebase_admin import firestore
+import random
 from . import main
 
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'token' not in session:
+            return render_template("loginrequire.html", guest = True), 401
+        return f(*args, **kwargs)
+    return decorated_function
+
 @main.route('/')
+@login_required
 def index():
-    if "token" in session:
-        return render_template('index.html')
-    return "로그인 필요"
+    return render_template('index.html')
 
 @main.route('/article')
 def article():
@@ -17,3 +26,11 @@ def article():
     if not doc.exists:
         return "ARTICLE NOT EXISTS!"
     return render_template('index.html',article_content=doc.to_dict()["content"])
+
+@main.route('/randomArticle')
+def randomArticle():
+    db = firestore.client()
+    title = request.args.get('title')
+    docs_ref = db.collection('articles').get()
+    doc = random.choice(docs_ref)
+    return redirect(url_for("main.article", title=doc.id))
