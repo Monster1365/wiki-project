@@ -15,7 +15,14 @@ def login_required(f):
 @main.route('/')
 @login_required
 def index():
-    return render_template('index.html')
+    db = firestore.client()
+    doc_ref = db.collection('articles').document('메인콘텐츠')
+    doc = doc_ref.get()
+    if not doc.exists:
+        article_content = "아직 콘텐츠가 없습니다."
+    else:
+        article_content = doc.to_dict().get('content', "내용이 없습니다.")
+    return render_template('index.html', article_content=article_content)
 
 @main.route('/article')
 def article():

@@ -188,6 +188,12 @@ nav a {
   padding: 10px;
 }
 
+#section_1 img {
+  margin: auto;
+  width:75%;
+  height: 75%;
+}
+
 #section_3_2 img {
   margin: auto;
   max-width: 200px;
@@ -217,6 +223,19 @@ nav a {
   width: 100%;
   height: 100%;
 }
+
+#section_5_7 img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#section_5_8 img {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
 
 #section_9_1 img {
   margin: auto;
@@ -261,11 +280,13 @@ footer {
 
 /* 각주 */
 .fn {
+  text-decoration: none;
   font-size: 10px;
   color: #0000cc;
 }
 
 .footnote a {
+  text-decoration: none;
   color: #0000cc;
 }
 
