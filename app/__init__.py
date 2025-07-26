@@ -5,7 +5,6 @@ from firebase_admin import credentials
 import json
 import base64
 
-
 def create_app():  
     app = Flask(__name__) 
     
@@ -17,7 +16,7 @@ def create_app():
         app.config["GOOGLE_CLIENT_ID"] = oauthKey["web"]["client_id"]
         app.config["GOOGLE_CLIENT_SECRET"] = oauthKey["web"]["client_secret"]
         app.config["JWT_SECRET_KEY"] = base64.b64encode(app.config["GOOGLE_CLIENT_SECRET"].encode())
-        app.secret_key = app.config["JWT_SECRET_KEY"] 
+        app.secret_key = app.config["JWT_SECRET_KEY"]
 
     jwt = JWTManager(app)
 
